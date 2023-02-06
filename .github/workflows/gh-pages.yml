@@ -50,7 +50,6 @@ jobs:
         run: dotnet publish Client/Client.csproj -c:Release -p:GHPages=true --no-restore -o dist/Client --nologo
         
       - name: Commit wwwroot to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          BRANCH: gh-pages
           FOLDER: dist/Client/wwwroot
